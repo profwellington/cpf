@@ -1,4 +1,4 @@
-class Emissor(object()):
+class Emissor(object):
 
     _local = (
         'Rio Grande do Sul', 
@@ -31,9 +31,21 @@ class Emissor(object()):
         pass
 
 
+    def _check_range(self, id):
+        return (id > -1 and id < 10)
+
+
     def get_local(self, id):
-        return self._local(id)
+        id = int(id) 
+        if (self._check_range(id)):
+            return self._local[id]
+        else:
+            return None
 
 
     def get_sigla(self, id):
-        return self._sigla(id)
+        id = int(id) 
+        if (self._check_range(id)):
+            return self._sigla[id]
+        else:
+            return None

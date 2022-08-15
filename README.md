@@ -1,6 +1,7 @@
 # Cadastro de Pessoa Física
-[![Maintainability](https://api.codeclimate.com/v1/badges/81deed5944f65b17ec8a/maintainability)](https://codeclimate.com/github/profwellington/cpf/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/81deed5944f65b17ec8a/test_coverage)](https://codeclimate.com/github/profwellington/cpf/test_coverage)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/1f2ef1b01cbe4292321d/maintainability)](https://codeclimate.com/github/profwellington/cpf/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/1f2ef1b01cbe4292321d/test_coverage)](https://codeclimate.com/github/profwellington/cpf/test_coverage)
 
 ## Verificar o estado emissor do CPF
 
@@ -19,6 +20,12 @@ A tabela dos códidos estados emissores é a seguinte:
 7. Rio de Janeiro e Espírito Santo;
 8. São Paulo;
 9. Paraná e Santa Catarina.
+
+### Coverage
+```bash
+#python -m coverage run -m unittest discover /test/ #precisa agrupar os teste em arquivo main.py
+python -m coverage run test/Cpf/test_aggregation.py
+```
 
 ## Referência:
 0. http://clubes.obmep.org.br/blog/a-matematica-nos-documentos-cpf/
