@@ -32,20 +32,15 @@ class Emissor(object):
 
 
     def _check_range(self, id):
+        id = int(id)
         return (id > -1 and id < 10)
 
 
     def get_local(self, id):
-        id = int(id) 
-        if (self._check_range(id)):
-            return self._local[id]
-        else:
-            return None
+        if self._check_range(id):
+            return self._local[int(id)]
 
 
     def get_sigla(self, id):
-        id = int(id) 
-        if (self._check_range(id)):
-            return self._sigla[id]
-        else:
-            return None
+        if self._check_range(id):
+            return self._sigla[int(id)]

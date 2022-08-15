@@ -133,7 +133,7 @@ class Test_Emissor(unittest.TestCase):
         self.assertEqual(result, estado)
 
 
-    def test_get_sigla_id_invalido(self):
+    def test_get_local_id_invalido(self):
         # arrange 
         id = 11
         emissor = Emissor()
@@ -145,13 +145,37 @@ class Test_Emissor(unittest.TestCase):
         self.assertIsNone(result)
 
 
-    def test_get_sigla_str_id_invalido(self):
+    def test_get_sigla_id_invalido(self):
+        # arrange 
+        id = 11
+        emissor = Emissor()
+        
+        # act 
+        result = emissor.get_sigla(id)
+
+        # assert 
+        self.assertIsNone(result)
+
+
+    def test_get_local_str_id_invalido(self):
         # arrange 
         id = '11'
         emissor = Emissor()
         
         # act 
         result = emissor.get_local(id)
+
+        # assert 
+        self.assertIsNone(result)
+
+    
+    def test_get_sigla_str_id_invalido(self):
+        # arrange 
+        id = '11'
+        emissor = Emissor()
+        
+        # act 
+        result = emissor.get_sigla(id)
 
         # assert 
         self.assertIsNone(result)
